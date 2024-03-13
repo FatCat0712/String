@@ -17,4 +17,4 @@ _ Phương thức chuyển đổi lớp String
 Vd substring(3,5) -> lấy từ vị trí index 3 đến trước index 5
    substring(3) -> lấy từ vị trí index 3 đến hết chuỗi
 
-+ split() -> phân chia chuỗi thành các cụm tử theo một khuôn mẫu 
++ split() -> phân tách chuỗi thành mảng
