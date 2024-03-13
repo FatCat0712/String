@@ -1,0 +1,104 @@
+ * Khai báo và sử dụng chuỗi
+
++ Java hỗ trợ Unicode -> mỗi kí tự dài 16 bit
+
+* Ví dụ hằng chuỗi
+
+System.out.println("Hello Word");
+
+* Ghép chuỗi:
+
+_ Dùng các toán tử + và += để ghép chuỗi.
+
+_ Ví dụ
+
+double distance = 45.5;
+System.out.println("Distance =" + distance + " miles.");
+
+-> Output: Distance = 45.5 miles
+
+* Chuỗi với vai trò là đối tượng
+
+Trong Java chuỗi có ba thể hiện
+_ String : bất biến
+
+_ StringBuffer: khả biến, multi-thread
+
+_ StringBuilder: khả biến, single-thread
+
+* Đều là các đối tượng chứ không phải mảng ký tự.
+
+* Khai báo và sử dụng ký tự
+
++ Char có độ dài 2 bytes và chứa các số nguyên không dấu.
+
++ Hằng ký tự được biểu diễn trong dấu nháy đơn
+
++ Bạn cũng cố thể nhập các ký tự đơn bằng dãy escape sequence \uxxx chỉ định thứ tự theo thập lập phân.
+
+char c = '\u0a76';
+System.out.println("Char = "+c);
+
+* Lớp String
+
++ Áp dụng cho các chuỗi có độ dài cố định, không đổi trong quá trình chạy.
+
++ Đối tượng String không đổi được.
+
+* Lệnh dựng chuỗi String
+
++ public String();
+
++ public String ( String original);
+
++ public String (char value[]);
+
++ public String (char value[], int offset, int count);
+
++ public String (int[] codePoints, int offset, int count);
+
++ public String (byte bytes[], int offset, int length, String charsetName);
+
++ public String (byte bytes[], int offset, int lenght, Charset charset);
+
++ public String (byte bytes[], String charsetName);
+
++ public String (byte bytes[], Charset charset);
+
++ public String (byte bytes[], int offset, int length);
+
++ public String (byte bytes[]);
+
++ public String (StringBuffer buffer);
+
++ public String (StringBuilder builder);
+
++ public String (byte ascii[], int hibyte, int offset, int count);
+
++ public String (byte ascii[], int hibyte);
+
+Ví dụ:
+
++ String s = new String();
+	-> chiều dài = 0
+
+_ Chú ý:
+
++ Ký tự trong Java là ký tự 16bit, không phải ASCII 8 bit
+
++ Các encoding (charset) : các chế độ mã hóa kí tự nền được sử dụng trong hệ thống để chuyển đổi ký tự ASCII thành Unicode.
+
+_ VD: UTF-8, UTF-16, US-ASCII, ISO-8859-1, ...
+
+* Các phương thức chuỗi String
+
++ length()
+
++ charAt()
+
++ getChars()
+
++ getBytes()
+
++ hashCode()
+
