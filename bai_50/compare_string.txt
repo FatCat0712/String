@@ -1,0 +1,41 @@
+* Phương thức so sánh lớp String
+
++ equals() -> so sánh 2 chuỗi có phân biệt hoa thường
+
++ equalsIgnoreCase() -> so sánh 2 chuỗi không phân biệt hoa thường
+
++ compareTo() -> so sánh độ lớn của chuỗi có phân biệt hoa thường
+
+Ví dụ:
+
+	s1.compareTo(s2) -> 0 => s1 bằng s2
+	s1.compareTo(s2) < 0 => s1 nhỏ hơn s2
+	s1.compareTo(s2) > 0 => s1 lớn hơn s2
+
++ compareToIgnoreCase() -> so sánh độ lớn của chuỗi không phân biệt hoa thường
+
++ regionMatch() -> so sánh một phần của chuỗi so với chuỗi khác
+
+regionMatch(toffset,String, ooffset, len)
+
+Ví dụ
+
+String r1 = "sonhai";
+String r2 = "hai";
+
+r1.regionMatch(3,r2,0,3)
+
+toffset = 3 -> bắt đầu so sánh từ vị trí có index 3 trong r1
+String = r2 -> so sánh với chuỗi r2
+ooffset = 0 -> so sánh từ vị trí index 0 trong r2
+len = 3 -> so sánh với độ dài là 3 ký tự trong r2
+
+-> có thể dùng để ứng dụng trong so sánh biển số xe, sđt, mã số sinh viên
+
++ startsWith() -> so sánh phần bắt đầu của chuỗi
+
+-> có thể dùng để ứng dụng trong so sánh biển số xe, sđt, mã số sinh viên
+
++ endWith() -> so sánh phần kết thúc của chuỗi
+
+-> có thể dùng để kiểm soát định dạng file upload lên server
