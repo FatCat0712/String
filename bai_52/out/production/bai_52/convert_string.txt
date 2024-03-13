@@ -1,0 +1,15 @@
+_ Phương thức chuyển đổi lớp String
+
++ concat() -> nối chuỗi
+
++ replace() -> thay thế chuỗi mới
+
++ toLowerCase() -> thay thành chuỗi in thường
+
++ toUpperCase() -> thay chuỗi in hoa
+
++ trim() -> xóa khoảng trắng ở đầu và cuối chuỗi
+
++ toCharArray() -> chuyển chuỗi thành mảng ký tự
+
++ substring() -> cắt chuỗi

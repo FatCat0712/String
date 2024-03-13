@@ -24,7 +24,7 @@ public class Test {
         for(int i = 0; i < arrayChar.length; i++){
             System.out.println("Position "+ i + " : " + arrayChar[i]);
         }
-        // getBytes
+        // getBytes => có 3 cách
         byte[] arrayByte = s.getBytes();
         for(byte b: arrayByte){
             System.out.println(b);
