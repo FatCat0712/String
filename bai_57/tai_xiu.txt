@@ -1,0 +1,13 @@
+Mỗi người chơi sẽ có tài khoản. Người chơi có quyền đặt cược số tiền ít hơn hoặc bằng số tiền họ đang có.
+
+* Luật chơi như sau:
+
+_ Có 3 viên xúc xắc. Mỗi viên xúc xắc có 6 mặt có giá trị từ 1 đến 6
+
+_ Mỗi lần lắc sẽ ra kết quả. Kết quả = giá trị xx1 + giá trị xx2 + giá trị xx3
+
+_ Nếu tổng = 3 hoặc 18 -> cái ăn hết người chơi thua
+
+_ Nếu tổng = (4 -> 10) -> xỉu 
+
+_ nếu tổng = (11 -> 17) -> tài
