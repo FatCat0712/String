@@ -1,0 +1,6 @@
+_ Phương thức lập chỉ mục lớp String
+
+indexOf() -> trả về vị trí xuất hiện đầu tiên của phần tử trong chuỗi
+
+
+lastIndexOf() -> trả về vị trí xuất hiện cuối cùng của phần tử trong chuỗi
