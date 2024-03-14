@@ -1,0 +1,21 @@
+Các lớp liên quan tới thời gian và lịch
+
++ TimeUnit : enum mô tả các đơn vị ngày tháng năm và thời gian
+
++ sql.Date: mô tả ngày tháng năm. Thông tin về thời gian bị cắt bỏ. Lớp này thường sử dụng trong JDBC
+
++ sql.Time: mô tả thời gian (giờ phút giây, milli giây). và không chứa thông tin ngày tháng năm. Lớp này sử dụng trong JDBC
+
++ sql.Timestamp : mô tả ngày tháng năm và thời gian. Lớp này sử dụng trong JDBC
+
++ Calendar: mô tả bộ lịch. Nó có các phương thức toán học về thời gian, chẳng hạn thêm ngày, bớt ngày, ...
+
++ GregorianCalender: dương lịch
+
++ TimeZone : mô tả múi giờ
+
++ SimpleDateFormat: chuyển 1 String có định dạnh sang kiểu Date và ngược lại
+
+* currentTimeMillies() là một method tĩnh của class System. Nó trả về khoảng thời gian bằng mg mili giấy tính từ ngày 1-1-1970 cho tới thời điểm hiện tại
+
+Xem thêm tại https://openplanning.net/10245/java-date-time
