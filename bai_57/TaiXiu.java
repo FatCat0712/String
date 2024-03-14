@@ -41,24 +41,38 @@ public class TaiXiu {
                     System.out.println("Bạn đã nạp "+numf.format(tienFinal)+" vào tài khoản");
                     break;
                 case 3:
-                    System.out.println("Trò chơi bắt đầu");
-                    System.out.println("bạn muốn đặt bao nhiêu ?");
-                    Scanner sc3 = new Scanner(System.in);
-                    String tienBet = sc3.nextLine();
-                    String tienBetThuc = tienBet.replaceAll("\\.","");
-                    double bet = Double.parseDouble(tienBetThuc);
-                    System.out.println("Bạn đã đặt "+numf.format(bet));
                     if(money <= 0){
                         System.out.println("Tài khoản của bạn không đủ để thực hiện trò chơi");
                         System.out.println("Vui lòng nhấn phím 1 để nạp thêm tiền");
                     }
-                    else if(bet > money){
-                        System.out.println("Bạn không thể đặt cược với lớn hơn với số tiền hiện có");
-
-                    }
                     else{
+                        System.out.println("Trò chơi bắt đầu");
+                        System.out.println("bạn muốn đặt bao nhiêu ?");
+                        Scanner sc3 = new Scanner(System.in);
+                        String tienBet = sc3.nextLine();
+                        String tienBetThuc = tienBet.replaceAll("\\.","");
+                        double bet = Double.parseDouble(tienBetThuc);
+                        while (bet <= 0 || bet > money){
+                            if(bet <= 0){
+                                System.out.println("Không thể đặt cược với số tiền âm");
+                            }
+                            else{
+                                System.out.println("Bạn không thể đặt cược với lớn hơn với số tiền hiện có");
+
+                            }
+                            System.out.println("Mời bạn đặt lại: ");
+                            String tienDatlai = sc3.nextLine();
+                            String tienDatLaiThuc = tienDatlai.replaceAll("\\.","");
+                            bet = Double.parseDouble(tienDatLaiThuc);
+
+                        }
+                        System.out.println("Bạn đã đặt "+numf.format(bet));
                         System.out.println("Bạn chọn tài hay xỉu:");
                         String choose = sc3.nextLine();
+                        while(!choose.equalsIgnoreCase("Tai") && !choose.equalsIgnoreCase("Xiu")){
+                            System.out.println("Lựa chọn không hợp lệ. Mời bạn đặt lại !");
+                            choose =sc3.nextLine();
+                        }
                         int ketqua = 0;
                         Random rd  = new Random();
                         for(int i = 0; i < 3; i++){
@@ -71,7 +85,7 @@ public class TaiXiu {
                         }
                         else if(ketqua > 4 && ketqua < 10){
                             System.out.println("Kết quả: " + ketqua + " --> "+"Xỉu");
-                            if(choose.equalsIgnoreCase("Xỉu")){
+                            if(choose.equalsIgnoreCase("Xiu")){
                                 System.out.println("Chúc mừng. Bạn đã thắng!");
                                 money += bet;
                             }
@@ -81,7 +95,7 @@ public class TaiXiu {
                             }
                         } else if (ketqua >= 11) {
                             System.out.println("Kết quả: " + ketqua + " --> "+"Tài");
-                            if(choose.equalsIgnoreCase("Tài")){
+                            if(choose.equalsIgnoreCase("Tai")){
                                 System.out.println("Chúc mừng. Bạn đã thắng!");
                                 money += bet;
                             }
@@ -92,7 +106,9 @@ public class TaiXiu {
                         }
                         System.out.println(ketqua);
                         System.out.println("Vui lòng chọn phím 3 để tiếp tục chơi !");
+
                     }
+
 
                     break;
                 case 4:
