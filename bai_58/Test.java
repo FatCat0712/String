@@ -29,18 +29,30 @@ public class Test {
 
         System.out.println("--- Testing Calendar ---");
         Calendar calendar = Calendar.getInstance();
+        System.out.println(calendar.get(Calendar.DATE)+ ":"+(calendar.get(Calendar.MONTH)+1) + ":" +calendar.get(Calendar.YEAR));
         System.out.println(calendar.get(Calendar.HOUR)+ ":"+calendar.get(Calendar.MINUTE) + ":" +calendar.get(Calendar.SECOND));
 
-        System.out.println(calendar.get(Calendar.DATE)+ "-" + (calendar.get(Calendar.MONTH) + 1) +"-" +calendar.get(Calendar.YEAR));
+        calendar.set(Calendar.YEAR, 2002);
+        calendar.set(Calendar.MONTH, 11);
+        calendar.set(Calendar.DATE, 7);
 
-        calendar.add(Calendar.HOUR,30);
-        System.out.println(calendar.get(Calendar.DATE)+ "-" + (calendar.get(Calendar.MONTH) + 1) +"-" +calendar.get(Calendar.YEAR));
+        int ngaySinh = calendar.get(Calendar.DATE);
+        int thangSinh = calendar.get(Calendar.MONTH)+1;
+        int namSinh = calendar.get(Calendar.YEAR);
 
-       calendar.add(Calendar.DATE,14);
-        System.out.println(calendar.get(Calendar.DATE)+ "-" + (calendar.get(Calendar.MONTH) + 1) +"-" +calendar.get(Calendar.YEAR));
-
-        calendar.add(Calendar.HOUR,30);
-        System.out.println(calendar.get(Calendar.DATE)+ "-" + (calendar.get(Calendar.MONTH) + 1) +"-" +calendar.get(Calendar.YEAR));
+        System.out.println(ngaySinh + "-" + thangSinh + "-" + namSinh);
+//
+//
+//        System.out.println(calendar.get(Calendar.DATE)+ "-" + (calendar.get(Calendar.MONTH) + 1) +"-" +calendar.get(Calendar.YEAR));
+//
+//        calendar.add(Calendar.HOUR,30);
+//        System.out.println(calendar.get(Calendar.DATE)+ "-" + (calendar.get(Calendar.MONTH) + 1) +"-" +calendar.get(Calendar.YEAR));
+//
+//       calendar.add(Calendar.DATE,14);
+//        System.out.println(calendar.get(Calendar.DATE)+ "-" + (calendar.get(Calendar.MONTH) + 1) +"-" +calendar.get(Calendar.YEAR));
+//
+//        calendar.add(Calendar.HOUR,30);
+//        System.out.println(calendar.get(Calendar.DATE)+ "-" + (calendar.get(Calendar.MONTH) + 1) +"-" +calendar.get(Calendar.YEAR));
 
 
         System.out.println("-- Testing simpleDateFormat ---");
