@@ -1,0 +1,24 @@
+enum (enumeration) là một loại kiểu dữ liệu đặc biệt cho phép tạo ra một tập hợp các giá trị được định sẵn và không thay đổi
+
+Enum có thể chứa các phương thức và constructor
+
+Mỗi enum sẽ kế thừa từ lớp cha java.lang.Enum
+
+Mảng chứa các enum [tên Enum].values()
+
+Nên khai báo tên enum theo style CamelCase
+
+Mỗi phần tử trong enum là một thể hiện của enum đó
+
+Ở mỗi phần tử trong enum nếu phần tử có 2 từ trở lên thì được nối bằng dấu "_"
+
+Các trường dữ liệu trong enum nên được khai báo với từ khóa final để đảm bảo giá trị của trường không bị thay đổi sau khi được khởi tạo.
+
+Vì là mỗi giá trị trong enum là 1 sự thể hiện của enum đó nên sau khi tạo constructor cho enum chúng ta cần khởi tạo các giá trị cho các trường cho từng giá trị của enum
+
+không được dùng access_modifier public cho constructor trong enum.
+
+
+Không thể tạo ra thể hiện của enum bằng từ khóa new. Vì nó chỉ các constructor private
+
+Có thể khai báo các phương thức trừu tượng và cung cấp việc thực hiện các phương thức này
